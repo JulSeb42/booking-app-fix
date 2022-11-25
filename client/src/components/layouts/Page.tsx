@@ -2,11 +2,13 @@
 
 import React, { useContext } from "react"
 import { Wrapper, Main, PageLoading } from "tsx-library-julseb"
+import { useLocation } from "react-router-dom"
 
 import { AuthContext, AuthContextType } from "../../context/auth"
+import { GlobalContext, GlobalType } from "../../context/global"
 
 import Helmet from "./Helmet"
-import Header from "./Header"
+import Header from "./Header/component"
 
 import { Props as HelmetProps } from "./Helmet"
 
@@ -21,11 +23,16 @@ const Page = ({
     isLoading,
     template = "1col",
 }: Props) => {
+    const location = useLocation().pathname
+
     const { isLoading: isApiLoading } = useContext(
         AuthContext
     ) as AuthContextType
+    const { isLoading: isGlobalLoading } = useContext(
+        GlobalContext
+    ) as GlobalType
 
-    return isApiLoading || isLoading ? (
+    return isApiLoading || isLoading || isGlobalLoading ? (
         <PageLoading />
     ) : (
         <>
@@ -36,7 +43,7 @@ const Page = ({
                 cover={cover}
             />
 
-            {!isLoading && <Header />}
+            {!isLoading && location !== "/" && <Header />}
 
             {!noWrapper ? (
                 <Wrapper template={template}>

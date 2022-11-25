@@ -1,6 +1,6 @@
 /*=============================================== UserCard types ===============================================*/
 
-import { UserType } from "../../types"
+import { UserType } from "../../../types"
 
 export interface UserCardProps {
     user: UserType

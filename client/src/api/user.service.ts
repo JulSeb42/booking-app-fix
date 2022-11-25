@@ -7,6 +7,10 @@ class UserService {
         return http.get("/users/all-users")
     }
 
+    allArtists() {
+        return http.get("/users/all-artists")
+    }
+
     getUser(id: string) {
         return http.get(`/users/user/${id}`)
     }

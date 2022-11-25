@@ -1,7 +1,7 @@
 /*=============================================== Site data ===============================================*/
 
 const siteData = {
-    name: "App name",
+    name: "Book a Band",
     favicon: "/favicon.ico",
     email: "",
     author: "",

@@ -2,11 +2,11 @@
 
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { ThemeProviderWrapper } from "tsx-library-julseb"
 import { BrowserRouter } from "react-router-dom"
 
 import App from "./App"
 import { AuthProviderWrapper } from "./context/auth"
+import { GlobalProviderWrapper } from "./context/global"
 
 import reportWebVitals from "./tests/reportWebVitals"
 
@@ -16,11 +16,11 @@ import "./styles/index.css"
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
     <BrowserRouter>
-        <ThemeProviderWrapper>
-            <AuthProviderWrapper>
+        <AuthProviderWrapper>
+            <GlobalProviderWrapper>
                 <App />
-            </AuthProviderWrapper>
-        </ThemeProviderWrapper>
+            </GlobalProviderWrapper>
+        </AuthProviderWrapper>
     </BrowserRouter>
 )
 

@@ -5,6 +5,8 @@ import { FC } from "react"
 import Homepage from "../pages/Homepage"
 import NotFound from "../pages/NotFound"
 
+import AllArtists from "../pages/artists/AllArtists"
+
 import Signup from "../pages/auth/Signup"
 import ThankYou from "../pages/auth/ThankYou"
 import Verify from "../pages/auth/Verify"
@@ -17,9 +19,6 @@ import Goodbye from "../pages/auth/Goodbye"
 import MyAccount from "../pages/account/MyAccount"
 import EditAccount from "../pages/account/EditAccount"
 import EditPassword from "../pages/account/EditPassword"
-
-import PublicProfile from "../pages/user/PublicProfile"
-import AllUsers from "../pages/user/AllUsers"
 
 type Route = {
     path: string
@@ -40,12 +39,8 @@ const routes: Route[] = [
     },
 
     {
-        path: "/users",
-        element: AllUsers,
-    },
-    {
-        path: "/users/:id",
-        element: PublicProfile,
+        path: "/artists",
+        element: AllArtists,
     },
 
     {
