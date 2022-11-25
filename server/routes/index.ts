@@ -6,6 +6,7 @@ import auth from "./auth"
 import users from "./users"
 import uploader from "./uploader"
 import search from "./search"
+import messaging from "./messaging"
 
 const router = Router()
 
@@ -17,5 +18,6 @@ router.use("/auth", auth)
 router.use("/users", users)
 router.use("/uploader", uploader)
 router.use("/search", search)
+router.use("/messaging", messaging)
 
 export default router
