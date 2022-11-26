@@ -13,4 +13,4 @@ npm-debug.log
 
 yarn.lock
 
-api/db/seed
+server/db/seed
