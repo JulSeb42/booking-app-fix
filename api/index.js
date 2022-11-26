@@ -1,3 +1,3 @@
-const app = require("../server/app.ts")
+const app = require("../server/app")
 
 module.exports = app
