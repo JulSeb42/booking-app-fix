@@ -6,6 +6,7 @@ import Homepage from "../pages/Homepage"
 import NotFound from "../pages/NotFound"
 
 import AllArtists from "../pages/artists/AllArtists"
+import ArtistDetail from "../pages/artists/ArtistDetail"
 
 import Signup from "../pages/auth/Signup"
 import ThankYou from "../pages/auth/ThankYou"
@@ -41,6 +42,10 @@ const routes: Route[] = [
     {
         path: "/artists",
         element: AllArtists,
+    },
+    {
+        path: "/artists/:id",
+        element: ArtistDetail,
     },
 
     {
