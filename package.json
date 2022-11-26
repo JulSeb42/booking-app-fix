@@ -3,10 +3,9 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "node server.js",
         "build": "cd client && yarn build",
         "install": "cd client && yarn",
-        "server": "nodemon --watch './**/*.ts' --exec 'ts-node' server/index.ts",
+        "server": "nodemon --watch './**/*.ts' --exec 'ts-node' api/index.ts",
         "client": "cd client && yarn start",
         "dev": "concurrently --kill-others 'yarn server' 'yarn client'"
     },
